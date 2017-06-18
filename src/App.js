@@ -22,16 +22,20 @@ class App extends Component {
     this.state = {
       brews: [
         {
-          name: "Coors"
+          name: "Coors",
+          abv: "3.2%"
         },
         {
-          name: "Bud"
+          name: "Bud",
+          abv: "3.2%"
         },
         {
-          name: "Miller"
+          name: "Miller",
+          abv: "3.2%"
         },
         {
-          name: "Mich"
+          name: "Mich",
+          abv: "3.5%"
         },
       ]
     }
