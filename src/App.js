@@ -6,16 +6,35 @@ import './App.css'
 import './Components/Project.scss'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = { isOpen: false };
-  }
-
-  toggleModal = () => {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
+  // constructor(props) {
+  //   super(props);
+  //
+  //   this.state = { isOpen: false };
+  // }
+  //
+  // toggleModal = () => {
+  //   this.setState({
+  //     isOpen: !this.state.isOpen
+  //   });
+  // }
+  constructor() {
+    super()
+    this.state = {
+      brews: [
+        {
+          name: "Coors"
+        },
+        {
+          name: "Bud"
+        },
+        {
+          name: "Miller"
+        },
+        {
+          name: "Mich"
+        },
+      ]
+    }
   }
 
   render() {
@@ -25,7 +44,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h2>Welcome to Dashboard 2017</h2>
           </div>
-        <Projects />
+        <Projects brews={this.state.brews}/>
         <button onClick={this.toggleModal}>
           Toggle Me
         </button>
