@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import BrewList from './BrewList'
 
-class Projects extends Component {
+class Brews extends Component {
   render() {
     let brewList;
     if(this.props.brews){
@@ -12,11 +12,11 @@ class Projects extends Component {
       });
     }
     return (
-      <div className="Projects">
+      <div className="Brews">
         {brewList}
       </div>
     );
   }
 }
 
-export default Projects;
+export default Brews;
