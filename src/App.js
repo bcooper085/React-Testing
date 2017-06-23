@@ -20,6 +20,7 @@ class App extends Component {
   // }
   constructor() {
     super()
+    this.handleAddBrew = this.handleAddBrew.bind(this);
     this.state = {
       brews: []
     }
@@ -51,6 +52,10 @@ class App extends Component {
     ]})
   }
 
+  handleAddBrew(brew) {
+    console.log(brew);
+  }
+
   render() {
     return (
       <div className="App">
@@ -58,7 +63,7 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h2>Welcome to Beer Board 2017</h2>
           </div>
-        <AddBrew />
+        <AddBrew addBrew={this.handleAddBrew}/>
         <Brews brews={this.state.brews}/>
         <button onClick={this.toggleModal}>
           Toggle Me
