@@ -54,6 +54,10 @@ class App extends Component {
 
   handleAddBrew(brew) {
     console.log(brew);
+    let brews = this.state.brews;
+    brews.push(brew);
+    console.log(this.state)
+    this.setState({brews:brews})
   }
 
   render() {
@@ -63,16 +67,18 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h2>Welcome to Beer Board 2017</h2>
           </div>
-        <AddBrew addBrew={this.handleAddBrew}/>
-        <Brews brews={this.state.brews}/>
-        <button onClick={this.toggleModal}>
-          Toggle Me
-        </button>
-
-        <Modal show={this.state.isOpen}
-          onClose={this.toggleModal}>
-
-        </Modal>
+          <div className="content-container">
+            <AddBrew addBrew={this.handleAddBrew}/>
+            <div className="brew-container">
+              <Brews brews={this.state.brews}/>
+            </div>
+            <button onClick={this.toggleModal}>
+              Toggle Me
+            </button>
+            <Modal show={this.state.isOpen}
+              onClose={this.toggleModal}>
+            </Modal>
+          </div>
       </div>
     );
   }

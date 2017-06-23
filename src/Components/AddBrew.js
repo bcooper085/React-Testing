@@ -30,7 +30,7 @@ class AddBrew extends Component {
 
   render() {
     let styleOptions = this.props.styles.map(style => {
-      return <option key={style} value="style">{style}</option>
+      return <option key={style} value={style}>{style}</option>
     });
     return (
       <div className="AddBrew">
