@@ -62,23 +62,29 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-          <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h2>Welcome to Beer Board 2017</h2>
-          </div>
-          <div className="content-container">
-            <AddBrew addBrew={this.handleAddBrew}/>
-            <div className="brew-container">
-              <Brews brews={this.state.brews}/>
+      <div className="container">
+        <div className="App">
+            <div className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h2>Beer Board 2100</h2>
             </div>
-            <button onClick={this.toggleModal}>
-              Toggle Me
-            </button>
-            <Modal show={this.state.isOpen}
-              onClose={this.toggleModal}>
-            </Modal>
-          </div>
+            <div className="content-container">
+              <div className="row">
+                <div className="col s6">
+                  <AddBrew addBrew={this.handleAddBrew}/>
+                </div>
+              </div>
+              <div className="brew-container">
+                <Brews brews={this.state.brews}/>
+              </div>
+              <button onClick={this.toggleModal}>
+                Toggle Me
+              </button>
+              <Modal show={this.state.isOpen}
+                onClose={this.toggleModal}>
+              </Modal>
+            </div>
+        </div>
       </div>
     );
   }

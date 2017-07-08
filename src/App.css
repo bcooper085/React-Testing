@@ -1,3 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.brew-container {
+  display: flex;
+}
+
 .App {
   text-align: center;
 }
@@ -7,20 +17,25 @@
   height: 80px;
 }
 
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .App-header {
-  background-color: #555;
-  height: 150px;
+  background-color: #f44242;
   padding: 20px;
   color: white;
 }
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+// The modal
+.modal-style = {
+  background-color: '#fff';
+  border-radius: 5;
+  max-width: 500;
+  min-height: 300;
+  margin: '0 auto';
+  padding: 30;
 }
 
 .backdrop-style = {
@@ -31,14 +46,4 @@
   right: 0;
   background: 'rgba(220,220,220,0.3)';
   padding: 50;
-}
-
-// The modal "window"
-.modal-style = {
-  background-color: '#fff';
-  border-radius: 5;
-  max-width: 500;
-  min-height: 300;
-  margin: '0 auto';
-  padding: 30;
 }

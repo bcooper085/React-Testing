@@ -34,23 +34,23 @@ class AddBrew extends Component {
     });
     return (
       <div className="AddBrew">
-        <h3>Add Brew</h3>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label>Name: </label>
-            <input type="text" ref="name" /><br />
+        <form className="card">
+        <h4>Add Brew</h4>
+          <div onSubmit={this.handleSubmit}>
+            <div className="input-field">
+              <input placeholder="Name" id="brew_name" type="text" ref="name" />
+            </div>
+            <div className="input-field">
+              <input placeholder="Abv" type="text" ref="abv" /><br />
+            </div>
+            <div className="input-field">
+              <label>Style: </label>
+              <select ref="style">
+                {styleOptions}
+              </select>
+            </div>
+            <input className="waves-effect waves-light btn" type="submit" value="Submit" />
           </div>
-          <div>
-            <label>Abv: </label>
-            <input type="text" ref="abv" /><br />
-          </div>
-          <div>
-            <label>Style: </label>
-            <select ref="style">
-              {styleOptions}
-            </select>
-          </div>
-          <input type="submit" value="Submit" />
         </form>
       </div>
     );
