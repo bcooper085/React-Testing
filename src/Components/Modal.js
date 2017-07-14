@@ -10,7 +10,6 @@ class Modal extends Component {
       <div className="backdrop-style" >
         <div className="modal-style" >
           {this.props.children}
-
           <div className="footer">
             <textarea>Beer Feedback</textarea>
             <br />

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import RaisedButton from 'material-ui/RaisedButton'
 
 class AddBrew extends Component {
   constructor() {
@@ -34,11 +35,10 @@ class AddBrew extends Component {
     });
     return (
       <div className="AddBrew">
-        <form className="card">
+        <form onSubmit={this.handleSubmit}>
         <h4>Add Brew</h4>
-          <div onSubmit={this.handleSubmit}>
             <div className="input-field">
-              <input placeholder="Name" id="brew_name" type="text" ref="name" />
+              <input placeholder="Name" type="text" ref="name" />
             </div>
             <div className="input-field">
               <input placeholder="Abv" type="text" ref="abv" /><br />
@@ -49,8 +49,7 @@ class AddBrew extends Component {
                 {styleOptions}
               </select>
             </div>
-            <input className="waves-effect waves-light btn" type="submit" value="Submit" />
-          </div>
+            <RaisedButton type="submit" label="Add" />
         </form>
       </div>
     );

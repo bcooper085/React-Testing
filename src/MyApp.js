@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Brews from './Components/Brews'
 import AddBrew from './Components/AddBrew'
-import Modal from './Components/Modal'
+// import Modal from './Components/Modal'
 import logo from './beerMug.png'
 import './App.css'
 import './Components/Project.scss'
 
-class App extends Component {
+class MyApp extends Component {
   // constructor(props) {
   //   super(props);
   //
@@ -62,8 +62,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="App">
+        <div className="MyApp">
             <div className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
               <h2>Beer Board 2100</h2>
@@ -80,14 +79,13 @@ class App extends Component {
               <button onClick={this.toggleModal}>
                 Toggle Me
               </button>
-              <Modal show={this.state.isOpen}
+              {/* <Modal show={this.state.isOpen}
                 onClose={this.toggleModal}>
-              </Modal>
+              </Modal> */}
             </div>
         </div>
-      </div>
     );
   }
 }
 
-export default App;
+export default MyApp;
