@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import RaisedButton from 'material-ui/RaisedButton'
+import { Button } from 'react-bootstrap'
 
 class AddBrew extends Component {
   constructor() {
@@ -37,19 +37,16 @@ class AddBrew extends Component {
       <div className="AddBrew">
         <form onSubmit={this.handleSubmit}>
         <h4>Add Brew</h4>
-            <div className="input-field">
-              <input placeholder="Name" type="text" ref="name" />
-            </div>
-            <div className="input-field">
-              <input placeholder="Abv" type="text" ref="abv" /><br />
-            </div>
-            <div className="input-field">
-              <label>Style: </label>
+          <input placeholder="Name" type="text" ref="name" />
+          <br />
+          <input placeholder="Abv" type="text" ref="abv" />
+          <br />
+          <label>Style:</label>
               <select ref="style">
                 {styleOptions}
               </select>
-            </div>
-            <RaisedButton type="submit" label="Add" />
+          <br />
+          <Button bsStyle="info" type="submit">+</Button>
         </form>
       </div>
     );

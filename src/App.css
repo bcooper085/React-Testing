@@ -7,10 +7,10 @@ body {
 }
 
 .brew-container {
-  display: flex;
+  margin-top: 5%;
 }
 
-.App {
+.MyApp {
   text-align: center;
 }
 

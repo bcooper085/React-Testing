@@ -5,6 +5,7 @@ import AddBrew from './Components/AddBrew'
 import logo from './beerMug.png'
 import './App.css'
 import './Components/Project.scss'
+import { Row, Col } from 'react-bootstrap'
 
 class MyApp extends Component {
   // constructor(props) {
@@ -32,31 +33,29 @@ class MyApp extends Component {
       {
         name: "Coors",
         style: "Light Lager",
-        abv: "3.2%",
+        abv: "3.2",
       },
       {
         name: "Bud",
         style: "Light Lager",
-        abv: "3.2%"
+        abv: "3.2"
       },
       {
         name: "Miller",
         style: "Light Lager",
-        abv: "3.2%"
+        abv: "3.2"
       },
       {
         name: "Mich",
         style: "Light Lager",
-        abv: "3.5%"
+        abv: "3.5"
       },
     ]})
   }
 
   handleAddBrew(brew) {
-    console.log(brew);
     let brews = this.state.brews;
     brews.push(brew);
-    console.log(this.state)
     this.setState({brews:brews})
   }
 
@@ -68,18 +67,16 @@ class MyApp extends Component {
               <h2>Beer Board 2100</h2>
             </div>
             <div className="content-container">
-              <div className="row">
-                <div className="col s6">
-                  <AddBrew addBrew={this.handleAddBrew}/>
-                </div>
-              </div>
-              <div className="brew-container">
+              <Row>
+                <AddBrew addBrew={this.handleAddBrew}/>
+              </Row>
+              <Row className="brew-container">
                 <Brews brews={this.state.brews}/>
-              </div>
-              <button onClick={this.toggleModal}>
+              </Row>
+              {/* <button onClick={this.toggleModal}>
                 Toggle Me
               </button>
-              {/* <Modal show={this.state.isOpen}
+              <Modal show={this.state.isOpen}
                 onClose={this.toggleModal}>
               </Modal> */}
             </div>

@@ -5,7 +5,7 @@ class BrewList extends Component {
     return (
       <div className="BrewList">
           <p className="App-intro">
-            {this.props.brew.name}: {this.props.brew.abv}<br />
+            {this.props.brew.name}: {this.props.brew.abv}%<br />
             {this.props.brew.style}
           </p>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BrewList from './BrewList'
+import { Well, Col } from 'react-bootstrap'
 
 class Brews extends Component {
   render() {
@@ -7,7 +8,11 @@ class Brews extends Component {
     if(this.props.brews){
       brewList = this.props.brews.map(brew => {
         return (
-          <BrewList brew={brew} />
+          <Col md={2}>
+            <Well>
+              <BrewList brew={brew} />
+            </Well>
+          </Col>
         )
       });
     }
