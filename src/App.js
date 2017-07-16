@@ -5,9 +5,9 @@ import AddBrew from './Components/AddBrew'
 import logo from './beerMug.png'
 import './App.css'
 import './Components/Project.scss'
-import { Row, Col } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 
-class MyApp extends Component {
+class App extends Component {
   // constructor(props) {
   //   super(props);
   //
@@ -61,7 +61,7 @@ class MyApp extends Component {
 
   render() {
     return (
-        <div className="MyApp">
+        <div className="AddBrew">
             <div className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
               <h2>Beer Board 2100</h2>
@@ -85,4 +85,4 @@ class MyApp extends Component {
   }
 }
 
-export default MyApp;
+export default App;
